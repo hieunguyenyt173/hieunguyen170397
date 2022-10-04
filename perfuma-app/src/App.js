@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import ProductMen from './pages/ProductMen';
+import ProductWomen from './pages/ProductWomen';
+import Sale from './pages/Sale';
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
+import Login from './pages/Login';
+import Whistlist from './pages/Wishlist';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />}/>
+        <Route path="nuoc-hoa-nam" element={<ProductMen />}/>
+        <Route path="nuoc-hoa-nu" element={<ProductWomen />}/>
+        <Route path="khuyen-mai" element={<Sale />}/>
+        <Route path="tin-tuc" element={<Blog />}/>
+        <Route path="lien-he" element={<Contact />}/>
+        <Route path="*" element={<NotFound />}/>
+        <Route path="login" element={<Login />}/>
+        <Route path="san-pham-yeu-thich" element={<Whistlist />}/>
+      </Route>
+    </Routes>
+    </>
   );
 }
 
