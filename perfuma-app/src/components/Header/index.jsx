@@ -23,7 +23,7 @@ function Header() {
           </div>
           <div className="col-sm-4">
             <div className="navbar-icon align-items-center justify-content-end">
-              <p className="hello mb-0 hide">Xin chào, <span className="username">Khách</span></p>
+              <p className="hello mb-0 hide">Xin chào, Khách</p>
               <div className="icon fs-4">
                
                   <Link to="/login" className="icon-header">
@@ -35,7 +35,7 @@ function Header() {
                 
                   <a href="#" className="icon-header">
                   <div className="bag"><i className="fa-solid fa-bag-shopping"></i>
-                    <span className="amount">0</span>
+                    <p className="amount">0</p>
                   </div>
                   </a>
 

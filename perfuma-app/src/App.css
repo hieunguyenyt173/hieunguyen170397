@@ -31,7 +31,7 @@ li {
 }
 
 a {
-  color: var(--semi-black);
+  color: var(--semi-black) !important;
   text-decoration: none !important;
 }
 
@@ -81,7 +81,7 @@ img {
 .subnav a {
   padding: 8px 10px;
 
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .subnav-tablet {
@@ -231,9 +231,11 @@ Sidebar
 }
 /* Popup-login,create */
 
-.modal-header {
-  padding: 16px 12px;
-  border: none;
+.popup-login {
+  padding-top: 40px;
+ margin: 0 auto;
+  width: 80%;
+  max-width: 400px;
 }
 
 .title {
@@ -248,10 +250,10 @@ Sidebar
   letter-spacing: 1.37px;
 }
 
-.btn-create {
+.login .btn-create {
   padding: 12px 0;
-  background-color: var(--red);
-  color: var(--white);
+  background-color: var(--red) !important;
+  color: var(--white) !important;
   letter-spacing: 1.37px;
 }
 
@@ -263,7 +265,7 @@ Sidebar
   color: var(--red);
 }
 .form-floating .form-control {
-  height: auto;
+  height: 100px;
 }
 
 .image {
@@ -403,13 +405,16 @@ Sidebar
   font-weight: 500;
 }
 #slider .item-brand {
+  
   overflow: hidden;
   box-shadow: none;
   height: 110px;
   border: var(--boder);
   border-radius: 15px;
 }
-
+#slider .slick-slide {
+  margin: 10px;
+}
 #slider .item-brand img {
   max-width: 100%;
   height: 100%;
@@ -448,6 +453,10 @@ Sidebar
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 /* Section sale */
+.card {
+  width: 18rem;
+}
+
 #sale .sale-timer {
   width: 33px;
   height: 33px;
@@ -692,7 +701,9 @@ Sidebar
   object-fit: cover;
 }
 /* Section blog */
-
+.card {
+  width: 100%;
+}
 .time-blog {
   font-size: 12px;
 }
@@ -987,9 +998,7 @@ Sidebar
     font-size: 14px;
     margin-bottom: 16px;
   }
-  .infomation {
-    padding-right: 24px;
-  }
+  
 }
 
 @media (max-width: 576px) {
@@ -1016,3 +1025,45 @@ Sidebar
     margin-bottom: 16px;
   }
 }
+
+iframe {
+  width: 600px;
+  height:450px;
+  border: 0;
+}
+/* Contact - start */
+.ggmap {
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+}
+
+#contact .layout-form-contact {
+  width: 70%;
+}
+
+
+/* Reponsive  */
+@media (max-width:768px) {
+  .layout-form-contact {
+      width: 100%;
+  }
+  
+}
+
+@media (min-width:992px) {
+  .contact-desc {
+      line-height: 1.8;
+  }
+}
+@media (max-width:576px) {
+  .contact-info .logo {
+      text-align: left;
+  }
+  .contact-desc {
+      line-height: 1.8;
+  }
+}
+/* Contact-end */
