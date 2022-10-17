@@ -47,7 +47,7 @@ function ListBrand() {
         },
       }}
       modules={[Pagination, Autoplay]}
-      className="brandSwipper"
+      className="brandSwipper pb-1"
     >
       <SwiperSlide>
       <div className="item-brand">

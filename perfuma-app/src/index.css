@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+    .product-amount {
+        font-size: 14px;
+    }
+    .btn-view {
+        display: none !important;
+    }
+    /* Section 1 */
+    .breadcrumb  {
+        font-size: 10px;
+    }
+    h3 {
+        text-align: center;
+        margin-top: 14px;
+    }
+    .menu-filter-desktop, .menu-show, .filter-option {
+        display: none !important;
+    }
+    .product-price {
+        font-size: 12px;
+    }
+  
+    .filter-mobile {
+        cursor: pointer;
+    }
+  }

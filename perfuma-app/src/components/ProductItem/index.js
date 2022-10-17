@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { formatMoney } from "../../utils/utils";
 function ProductItem(props) {
-  const { imageproduct, sale_title, brandname, price, name } = props.product;
+  const { id, imageproduct, sale_title, brandname, price, name } = props.product;
   return (
     <div className="item shadow mb-3 bg-body rounded mx-2">
       <div className="row">
@@ -33,7 +34,7 @@ function ProductItem(props) {
         </div>
       </div>
       <div className="row">
-        <a href="./product-details.html?id=${p.id}">
+        <Link to={`/${id}`}>
           <div className="col">
             <div className="product-info d-flex flex-column justify-content-between">
               <p className="product-brand mb-1">{brandname}</p>
@@ -48,7 +49,7 @@ function ProductItem(props) {
               </div>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );

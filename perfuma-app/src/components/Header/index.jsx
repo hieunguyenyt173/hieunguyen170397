@@ -33,11 +33,11 @@ function Header() {
                 <i className="fa-solid fa-heart"></i>
                 </Link>
                 
-                  <a href="#" className="icon-header">
+                  <Link to="gio-hang" className="icon-header">
                   <div className="bag"><i className="fa-solid fa-bag-shopping"></i>
                     <p className="amount">0</p>
                   </div>
-                  </a>
+                  </Link>
 
               </div>
             </div>

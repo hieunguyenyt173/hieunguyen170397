@@ -14,10 +14,10 @@ function ListProducts(props) {
       slidesPerView={1}
       breakpoints={{
         0: {
-          slidesPerView: 2,
+          slidesPerView: 1,
         },
-        576: {
-          slidesPerView: 3,
+        450: {
+          slidesPerView: 2,
         },
         768: {
           slidesPerView: 3,

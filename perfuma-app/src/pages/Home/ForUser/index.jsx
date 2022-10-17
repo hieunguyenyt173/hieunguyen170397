@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import Context from '../../../context/Context'
 import ListProductUser from './ListProductUser'
 import banneruser from '../../../assets/img/banner-sale.png'
+import { Link } from 'react-router-dom'
 function ForUser() {
     const { userProduct} = useContext(Context)
   return (
@@ -12,8 +13,11 @@ function ForUser() {
         <div className="col text-center mt-5">
           <h3 className="text-uppercase fs-4">Dành riêng cho bạn</h3>
           <p className="">Đăng nhập ngay để nhận những ưu đãi chỉ dành cho thành viên</p>
+          <Link to="/login">
           <button type="button" className="btn btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Đăng
-            nhập ngay</button>
+            nhập ngay
+          </button>
+          </Link>
         </div>
       </div>
       <div className="row">

@@ -12,7 +12,7 @@ import Services from "./Services";
 import Subcribe from "./Subcribe";
 function Home() {
   return (
-    <div>
+    <div id="main">
       <Banner />
       <ListBrand />
       <Category />
