@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Contact() {
+  const [email, setEmail] = useState("")
+  const [name, setName] = useState("")
+  const [note, setNote] = useState("")
+  const handleSubmit = () => {
+    if(!email) {
+      alert("Email không được để trống")
+      return
+    }
+    if(!name) {
+      alert("Tên không được để trống")
+      return
+    }
+    if(!note) {
+      alert("Ghi chú không được để trống")
+      return
+    }
+    alert("Gửi thông tin thành công ! ")
+    setEmail("")
+    setName("")
+    setNote("")
+  }
   return (
     <div id="contact">
       <div className="container">
@@ -59,6 +80,8 @@ function Contact() {
               <div className="form-floating mb-3">
                 <input
                   type="email"
+                  value={email}
+                  onChange={ (e) => setEmail(e.target.value)}
                   className="form-control"
                   id="floatingInput"
                   placeholder="name@example.com"
@@ -68,6 +91,8 @@ function Contact() {
               <div className="form-floating mb-3">
                 <input
                   type="text"
+                  value={name}
+                  onChange={ (e) => setName(e.target.value)}
                   className="form-control"
                   id="floatingName"
                   placeholder="Name"
@@ -77,12 +102,14 @@ function Contact() {
               <div className="form-floating mb-3">
                 <textarea
                   className="form-control"
+                  value={note}
+                  onChange={ (e) => setNote(e.target.value)}
                   placeholder="Leave a comment here"
                   id="floatingTextarea2"
                 ></textarea>
                 <label htmlFor="floatingTextarea2">Ghi chú</label>
               </div>
-              <div className="btn btn-danger mb-5">Gửi liên hệ</div>
+              <div className="btn btn-danger mb-5" onClick={e => handleSubmit()}>Gửi liên hệ</div>
             </div>
           </div>
         </div>

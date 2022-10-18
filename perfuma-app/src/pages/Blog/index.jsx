@@ -7,11 +7,11 @@ function Blog() {
     <div id="blog">
       <div className="container">
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb pt-3 pb-4">
-            <li class="breadcrumb-item">
+          <ol className="breadcrumb pt-3 pb-4">
+            <li className="breadcrumb-item">
               <a href="./index.html">Trang chủ</a>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">
+            <li className="breadcrumb-item active" aria-current="page">
               Tin tức
             </li>
           </ol>

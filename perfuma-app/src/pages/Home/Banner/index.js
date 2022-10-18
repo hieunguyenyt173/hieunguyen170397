@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import banner from "../../../assets/img/banner.webp"
 import banner2 from "../../../assets/img/banner2.webp"
 import banner3 from "../../../assets/img/banner3.webp"
+import { Link } from "react-router-dom";
 
 function Banner() {
   const settings = {
@@ -21,15 +22,15 @@ function Banner() {
     <div id="banner">
       <div className="container">
         <Slider {...settings}>
-        <a href="./sale.html">
+        <Link to="/khuyen-mai">
           <img className="banner" src={banner} alt="banner" />
-        </a>
-        <a href="./sale.html">
+        </Link>
+        <Link to="/khuyen-mai">
           <img className="banner" src={banner2} alt="banner" />
-        </a>
-        <a href="./sale.html">
+        </Link>
+        <Link to="/khuyen-mai">
           <img className="banner" src={banner3} alt="banner" />
-        </a>
+        </Link>
         </Slider>
       </div>
     </div>

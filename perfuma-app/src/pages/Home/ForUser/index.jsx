@@ -22,11 +22,11 @@ function ForUser() {
       </div>
       <div className="row">
         <div className="col-lg-5 col-md-12 col-sm-12 mb-3">
-          <a href="./sale.html">
+          <Link to="/khuyen-mai">
             <div className="banner-sale-user">
               <img src={banneruser} alt="banner-sale-user"/>
             </div>
-          </a>
+          </Link>
         </div>
         <div className="col-lg-7 product-user">
           <div className="row list-product-user">
@@ -35,11 +35,11 @@ function ForUser() {
 
         </div>
       </div>
-      <a href="./sale.html">
+      <Link to="#">
         <div className="btn-more text-center mt-2">Xem thêm <span className="icon-more"><i
               className="fa-solid fa-angles-right"></i></span>
         </div>
-      </a>
+      </Link>
     </div>
   </div>
   )

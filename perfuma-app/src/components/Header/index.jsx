@@ -1,52 +1,130 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   return (
     <div>
-        <div id="header">
-    <div className="container">
-      <div className="header-bar">
-        <div className="row">
-          <div className="col-sm-4 d-flex align-items-center">
-            <div className="seach-form d-flex align-items-center rounded shadow-sm pe-3">
-              
-              <input type="text" placeholder="Tìm kiếm sản phẩm" className="form-control border-0 seach-form-input"/>
-              
-              <span className="text-black-50 seach-form-button ps-2"><i className="fa-solid fa-magnifying-glass"></i></span>
-            </div>
-          </div>
-          <div className="col-sm-4 d-flex align-items-center justify-content-center">
-            <Link to="/">
-              <div className="logo text-decoration-underline">Perfuma</div>
-            </Link>
-          </div>
-          <div className="col-sm-4">
-            <div className="navbar-icon align-items-center justify-content-end">
-              <p className="hello mb-0 hide">Xin chào, Khách</p>
-              <div className="icon fs-4">
-               
-                  <Link to="/login" className="icon-header">
-                    <i className="fa-solid fa-user"></i>
-                  </Link>
-                <Link to="/san-pham-yeu-thich"className="icon-header">
-                <i className="fa-solid fa-heart"></i>
-                </Link>
-                
-                  <Link to="gio-hang" className="icon-header">
-                  <div className="bag"><i className="fa-solid fa-bag-shopping"></i>
-                    <p className="amount">0</p>
-                  </div>
-                  </Link>
+      <div id="header">
+        <div className="container">
+          <div className="header-bar">
+            <div className="row">
+              <div className="col-sm-4 d-flex align-items-center">
+                <div className="seach-form d-flex align-items-center rounded shadow-sm pe-3">
+                  <input
+                    type="text"
+                    placeholder="Tìm kiếm sản phẩm"
+                    className="form-control border-0 seach-form-input"
+                  />
 
+                  <span className="text-black-50 seach-form-button ps-2">
+                    <i className="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                </div>
+              </div>
+              <div className="col-sm-4 d-flex align-items-center justify-content-center">
+                <Link to="/">
+                  <div className="logo text-decoration-underline">Perfuma</div>
+                </Link>
+              </div>
+              <div className="col-sm-4">
+                <div className="navbar-icon align-items-center justify-content-end">
+                  <p className="hello mb-0 hide">Xin chào, Khách</p>
+                  <div className="icon fs-4">
+                    <Link to="/login" className="icon-header">
+                      <i className="fa-solid fa-user"></i>
+                    </Link>
+                    <Link to="/san-pham-yeu-thich" className="icon-header">
+                      <i className="fa-solid fa-heart"></i>
+                    </Link>
+
+                    <Link to="gio-hang" className="icon-header">
+                      <div className="bag">
+                        <i className="fa-solid fa-bag-shopping"></i>
+                        <p className="amount">0</p>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div className="main-menu">
+      <div className="main-menu">
+        <div className="container">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                  <li class="nav-item mx-2  ">
+                    <NavLink class="nav-link active" aria-current="page" to="/">
+                      TRANG CHỦ
+                    </NavLink>
+                  </li>
+                  
+                  <li class="nav-item mx-2  dropdown">
+                    <NavLink
+                      class="nav-link dropdown-toggle"
+                      to="/san-pham"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      SẢN PHẨM
+                    </NavLink>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li>
+                        <Link class="dropdown-item" to="/nuoc-hoa-nam">
+                          Nước hoa nam
+                        </Link>
+                      </li>
+                      <li>
+                        <Link class="dropdown-item" to="nuoc-hoa-nu">
+                          Nước hoa nữ
+                        </Link>
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li>
+                        <Link class="dropdown-item" to="/bo-qua-tang">
+                          Bộ quà tặng
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item mx-2 ">
+                    <NavLink class="nav-link" to="/khuyen-mai">
+                      KHUYẾN MÃI
+                    </NavLink>
+                  </li>
+                  <li class="nav-item mx-2 ">
+                    <NavLink class="nav-link" to="/tin-tuc">
+                      TIN TỨC
+                    </NavLink>
+                  </li>
+                  <li class="nav-item mx-2 ">
+                    <NavLink class="nav-link" to="/lien-he">
+                      LIÊN HỆ
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      {/* <div className="main-menu">
     <div className="container">
       <div className="row">
         <div className="col-sm-12">
@@ -150,7 +228,7 @@ function Header() {
             </div>
 
             <p className="item-sidebar-men">Sản phẩm bán chạy</p>
-            <span span className="more fs-4"><i className="fa-solid fa-circle-arrow-right"></i></span>
+            <span className="more fs-4"><i className="fa-solid fa-circle-arrow-right"></i></span>
 
           </div>
         </div>
@@ -497,9 +575,9 @@ function Header() {
       </div>
     </div>
 
-  </div>
+  </div> */}
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
